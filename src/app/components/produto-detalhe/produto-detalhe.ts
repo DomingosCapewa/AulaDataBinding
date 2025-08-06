@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './produto-detalhe.css'
 })
 export class ProdutoDetalhe {
-  
+    @Input() nomeDoProduto = signal('');
+    @Input() precoDoProduto = signal(0);
+    @Input() urlDoProduto = signal('');
 }
