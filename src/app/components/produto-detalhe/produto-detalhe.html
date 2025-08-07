@@ -3,7 +3,7 @@
 <h1>{{nome()}}</h1>
 <img [src]="url()" alt="imagem do produto">
 <p>R$ {{preco()}}M</p>
-<button (click)="comprar()">Comprar</button>
+<button (click)="produtoComprado.emit({ nome: nome(), preco: preco() })">Comprar</button>
 
 </div>
 

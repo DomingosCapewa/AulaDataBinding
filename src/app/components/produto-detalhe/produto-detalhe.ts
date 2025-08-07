@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, signal } from '@angular/core';
+import { Component, EventEmitter, Input, Output, signal } from '@angular/core';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -12,7 +12,7 @@ export class ProdutoDetalhe {
     @Input() preco = signal(0);
     @Input() url = signal('');
 
-    comprar() {
-        alert(`${this.nome()} comprado por R$ ${this.preco()}`);
-    }
+    @Output() produtoComprado = new EventEmitter();
+
+  
 }
