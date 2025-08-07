@@ -1,7 +1,11 @@
-
 <div class="produto">
 
-<h1>{{nomeDoProduto()}}</h1>
-<img [src]="urlDoProduto()">
-<p>R$ {{precoDoProduto()}}</p>
+<h1>{{nome()}}</h1>
+<img [src]="url()" alt="imagem do produto">
+<p>R$ {{preco()}}M</p>
+<button (click)="comprar()">Comprar</button>
+<!-- <div *ngIf="preco() > 2">
+  <p>Produto caro!</p>
+</div> -->
 </div>
+
